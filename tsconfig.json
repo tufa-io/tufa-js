@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "declaration": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "sourceMap": true,
+    "target": "es5",
+    "outDir": "dist",
+    "baseUrl": "./",
+    "rootDir": "./",
+    "paths": {
+    }
+  },
+  "exclude": [
+    "node_modules", "dist"
+  ]
+}
