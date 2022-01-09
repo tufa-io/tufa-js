@@ -15,7 +15,11 @@ export async function getResources(conf: TufaConf, key: string): Promise<TufaRes
     },
     { json: true, headers: { [TUFA_KEY_HEADER]: key } }
   ).then((res) => {
-    return JSON.parse(res.body as string) as TufaResponse;
+    const body = JSON.parse(res.body as string);
+    if (res.statusCode !== 200) {
+      throw new Error(`Tufa error: ${body.message}`);
+    }
+    return body as TufaResponse;
   });
 }
 
